@@ -1,0 +1,32 @@
+* {
+  text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#grid {
+  display: flex;
+  width: 500px;
+  height: 500px;
+	border: 2px solid black;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+#control {
+	margin: auto;
+}
+
+#grid-input {
+	text-align: left;
+	width: 3rem;
+}
+
+.grid-col {
+	flex-direction: column;
+	flex: 1 1 auto;
+	align-items: stretch;
+}
+
+.grid-box {
+	border: 1px solid black;
+}
