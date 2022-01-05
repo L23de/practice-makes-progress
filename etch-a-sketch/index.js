@@ -26,10 +26,6 @@ function resetGrid() {
 
 // SkEtching functions
 function colorIn() {
-    // Check what color needs to be added
-    let truthy = document.getElementById('sliding-switch').checked;
-    console.log(truthy)
-
     // Applies the other color functions on 'this' context
     if (truthy) {
         colorRGB.call(this);
@@ -51,8 +47,15 @@ function colorRGB() {
 
 
 // On load (Default behavior)
+let truthy = false; // Global var modified by sliding switch
+
 createGrid(20);
 document.getElementById('submit').addEventListener('click', resetGrid);
+document.getElementById('switch-box').addEventListener('change', () => truthy = !truthy);
+document.getElementById('color-picker').addEventListener('change', (event) => {
+    console.log(event.target.value)
+    document.getElementById('switch-slider').style.backgroundColor = event.target.value
+})
 
 
 

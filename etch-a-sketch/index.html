@@ -11,23 +11,26 @@
 <body>
     <div id="header">
         <h1>Etch-A-Sketch</h1>
+
         <div id="control">
             <p>Create a new grid with your preferred grid size<br>(Keep it below 100 to prevent lag)</p>
             <input id="grid-input" type="number" value="20"></input>
             <button id="submit" type="submit">New Grid/Reset</button>
+
             <div id="switch-control">
                 <span>Color</span>
                 <div id="color-wrap">
                     <input title="color" type="color" id="color-picker" value="#000000">
                 </div>
                 <label class="switch">
-                    <input id="sliding-switch" type="checkbox">
-                    <span class="slider round"></span>
+                    <input id="switch-box" type="checkbox">
+                    <span id="switch-slider" class="slider round"></span>
                 </label>
                 <span>Random</span>
             </div>
         </div>
     </div>
+
     <div id="grid"></div>
     <script src="index.js"></script>
 </body>
