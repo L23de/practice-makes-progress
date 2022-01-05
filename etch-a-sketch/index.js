@@ -34,20 +34,16 @@ function colorIn() {
     if (truthy) {
         colorRGB.call(this);
     } else {
-        colorBlack.call(this);
+        let color = document.getElementById('color-picker').value
+        colorChoice.call(this, [color]);
     }
 }
 
-function colorBlack() {
-    this.style.backgroundColor = 'black';
-}
-
-function colorChoice() {
-    var bgColor = "";
+function colorChoice(bgColor) {
     this.style.backgroundColor = bgColor;
 }
 
-function colorRGB(event) {
+function colorRGB() {
     // Source for random color: https://css-tricks.com/snippets/javascript/random-hex-color/
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
     this.style.backgroundColor = `#${randomColor}`;
