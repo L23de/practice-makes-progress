@@ -56,6 +56,8 @@ let truthy = false; // Global var modified by sliding switch
 var prevData = localStorage.getItem('saveData') // Retrieve data from local storage if exists
 if (prevData) {
     document.documentElement.innerHTML = prevData
+    // Make sure that the color picker color stays the same
+    document.getElementById('switch-slider').style.backgroundColor = 'black';
 } else {
     createGrid(20); // Create default grid if fresh start
 }
