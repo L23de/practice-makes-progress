@@ -11,6 +11,7 @@ function createGrid(length) {
         for (let j = 0; j < length; j++) {
             const gridBox = document.createElement('div');
             gridBox.className = 'grid-box';
+            gridBox.addEventListener('mouseover', colorIn) // Add event listener for coloring
             gridCol.appendChild(gridBox);
         }
         mainGrid.append(gridCol);
@@ -25,6 +26,8 @@ function resetGrid() {
 
 // SkEtching functions
 function colorIn() {
+    // Check what color needs to be added
+
     // Applies the other color functions on 'this' context
     // colorRGB.call(this);
     colorBlack.call(this);
@@ -32,6 +35,11 @@ function colorIn() {
 
 function colorBlack() {
     this.classList.toggle('black-box');
+}
+
+function colorChoice() {
+    var bgColor = "";
+    this.style.backgroundColor = bgColor;
 }
 
 function colorRGB(event) {
@@ -43,14 +51,7 @@ function colorRGB(event) {
 
 // On load (Default behavior)
 createGrid(20);
-
-// Set up event listeners
 document.getElementById('submit').addEventListener('click', resetGrid);
-
-var boxes = document.getElementsByClassName('grid-box');
-Array.from(boxes).forEach((box) => {
-    box.addEventListener('mouseover', colorIn)
-});
 
 
 
