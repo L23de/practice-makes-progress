@@ -5,9 +5,12 @@
 
 #grid {
   display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	align-content: stretch;
   width: 500px;
   height: 500px;
-	border: 2px solid black;
+	border: 3px solid black;
 	margin: auto;
 	margin-top: 2rem;
 }
@@ -22,11 +25,14 @@
 }
 
 .grid-col {
+	display: flex;
 	flex-direction: column;
-	flex: 1 1 auto;
 	align-items: stretch;
+	align-content: stretch;
+	flex: 1;
 }
 
 .grid-box {
 	border: 1px solid black;
+	flex: 1;
 }
