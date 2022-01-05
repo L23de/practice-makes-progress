@@ -11,7 +11,7 @@ function createGrid(length) {
         for (let j = 0; j < length; j++) {
             const gridBox = document.createElement('div');
             gridBox.className = 'grid-box';
-            gridBox.addEventListener('mouseover', colorIn) // Add event listener for coloring
+            gridBox.addEventListener('mouseover', colorIn); // Add event listener for coloring
             gridCol.appendChild(gridBox);
         }
         mainGrid.append(gridCol);
@@ -19,7 +19,7 @@ function createGrid(length) {
 }
 
 function resetGrid() {
-    const newLength = document.getElementById('grid-input').value
+    const newLength = document.getElementById('grid-input').value;
     createGrid(parseInt(newLength));
 }
 
@@ -27,14 +27,19 @@ function resetGrid() {
 // SkEtching functions
 function colorIn() {
     // Check what color needs to be added
+    let truthy = document.getElementById('sliding-switch').checked;
+    console.log(truthy)
 
     // Applies the other color functions on 'this' context
-    // colorRGB.call(this);
-    colorBlack.call(this);
+    if (truthy) {
+        colorRGB.call(this);
+    } else {
+        colorBlack.call(this);
+    }
 }
 
 function colorBlack() {
-    this.classList.toggle('black-box');
+    this.style.backgroundColor = 'black';
 }
 
 function colorChoice() {
