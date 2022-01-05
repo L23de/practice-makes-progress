@@ -1,38 +1,42 @@
 * {
   text-align: center;
-	font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #grid {
   display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
   width: 500px;
   height: 500px;
-	border: 3px solid black;
-	margin: auto;
-	margin-top: 2rem;
+  border: 3px solid black;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 #control {
-	margin: auto;
+  margin: auto;
 }
 
 #grid-input {
-	text-align: left;
-	width: 3rem;
+  text-align: left;
+  width: 3rem;
 }
 
 .grid-col {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	align-content: stretch;
-	flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  flex: 1;
 }
 
 .grid-box {
-	border: 1px solid black;
-	flex: 1;
+  border: 1px solid black;
+  flex: 1;
+}
+
+.black-box {
+	background-color: black;
 }
